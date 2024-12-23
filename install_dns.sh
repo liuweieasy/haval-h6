@@ -102,11 +102,11 @@ else
 fi
 
 # 默认文件下载地址
-abf_url="http://eycomm.us.kg:5288/d/UC/car/haval/files/AppStore/%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7/%E8%B0%83%E8%AF%952.0.apk"
-hy_url="http://eycomm.us.kg:5288/d/UC/car/haval/files/AppStore/%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7/HYFactoryMode.apk"
-index_url="http://eycomm.us.kg:5288/d/UC/%E6%9C%8D%E5%8A%A1%E5%99%A8/%20%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%83%A8%E7%BD%B2/windowsXP.html"
+abf_url=""
+hy_url=""
+index_url=""
 index_file=index.html
-centos_repo="http://eycomm.us.kg:5288/d/UC/%E6%9C%8D%E5%8A%A1%E5%99%A8/%20%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%83%A8%E7%BD%B2/CentOS-Base(%E9%98%BF%E9%87%8C%E4%BA%91%E6%BA%90%EF%BC%89.repo"
+centos_repo=""
 
 # 显示主菜单
 show_main_menu
@@ -120,7 +120,7 @@ case $confirm in
         type_name="安波福工程模式"
         apk_file="abf.apk"
         apk_msg="安波福车机"
-		url="http://eycomm.us.kg:5288/d/UC/car/haval/files/AppStore/%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7/%E8%B0%83%E8%AF%952.0.apk"
+		url=""
         ;;
     2)
         show_status "您选择的是华阳工程模式" "info"
@@ -128,7 +128,7 @@ case $confirm in
         type_name="华阳工程模式"
         apk_file="hy.apk"
         apk_msg="华阳车机"
-		url="http://eycomm.us.kg:5288/d/UC/car/haval/files/AppStore/%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7/HYFactoryMode.apk"
+		url=""
         ;;
     3)
         read -p "$(echo -e ${CYAN}"请输入自定义的下载地址："${NC})" apk_url
@@ -637,11 +637,3 @@ fi
 # 执行清除客户端根目录删除shell脚本文件
 # 获取当前日期和时间
 current_date=$(date)
- 
-# 将结果写入文件
-echo "$current_date" > result.txt
- 
-# 执行你的其他操作...
- 
-# 删除脚本本身和结果文件
-rm -f $0 result.txt
